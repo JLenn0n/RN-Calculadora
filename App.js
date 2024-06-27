@@ -79,7 +79,7 @@ export default function App() {
                         </TouchableOpacity>
                         : // Mapeamento dos outros botões
                         <TouchableOpacity onPress={() => handleInput(button)} key={button} style={styles.button}>
-                            <Text style={[styles.textButton, { color: typeof (button) === 'number' ? 'black' : '#0093a6' }]}>{button}</Text>
+                            <Text style={[styles.textButton, { color: typeof (button) === 'number' ? '#7c7c7c' : '#0093a6' }]}>{button}</Text>
                         </TouchableOpacity>
                 )}
             </View>
@@ -95,14 +95,14 @@ const styles = StyleSheet.create({
     results: {
         flex: 2,
         justifyContent: "center",
-        backgroundColor: "#f5f5f5"
+        backgroundColor:'black'
     },
     resultText: {
-        color: "#282F38",
+        color: "white",
         fontSize: 32,
         fontWeight: "bold",
         padding: 12,
-        textAlign: "right"
+        textAlign: "right",
     },
     historyText: {
         color: "#7c7c7c",
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     },
     buttons: {
         flexDirection: 'row',
-        flexWrap: 'wrap',
+        flexWrap: 'wrap',        
     },
     button: {
         backgroundColor: 'white',
@@ -121,9 +121,14 @@ const styles = StyleSheet.create({
         minWidth: 90,
         minHeight: 90,
         flex: 2,
+        backgroundColor:'black',
+        borderRadius:100,
+        borderWidth:2,
+        borderColor:'grey',
     },
     textButton: {
         color: "#7c7c7c",
         fontSize: 20,
+        
     }
 });
